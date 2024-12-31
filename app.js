@@ -7,7 +7,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(morgan('dev'));
 const secure=require('./api/v1/middlewares/secure')
 app.use(secure);
-
+console.log(process.env.GOOGLE_USER);
+console.log(process.env.GOOGLE_PASS);
 
 
 app.use('/product',productRouter);
